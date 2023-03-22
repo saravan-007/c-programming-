@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main() {
+
+   float x,n ;
+
+   int r;
+
+   printf("enter the value of x :",x);
+
+   scanf("%f",&x);
+
+   printf("enter the value of n :",n);
+
+   scanf("%f",&n);
+
+   printf("enter the choice :",r);
+
+   scanf("%d",&r);
+
+   switch(r){
+
+       case 0: 
+
+       printf("the value is : %.2f", pow(x,n));
+
+       break;
+
+       case 1:
+
+       printf("the value is : %.2f",x + n);
+
+       break;
+
+       case 2:
+
+       printf("the value is : %.2f" , x-n);
+
+       break;
+
+       case 3:
+
+       printf("the value is : %.2f", x*n);
+
+       break;
+
+       case 4:
+
+       printf("the value is : %.2f", x/n);
+
+       break;
+
+      
+
+   }
+
+return 0;
+
+}
