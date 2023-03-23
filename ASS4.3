@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+   int lower, upper, sum = 0;
+   printf("Enter the lower bound: ");
+   scanf("%d", &lower);
+   printf("Enter the upper bound: ");
+   scanf("%d", &upper);
+   for(int i = lower; i <= upper; i++) {
+      if(i % 2 != 0) {
+         sum += i;
+      }
+   }
+   printf("The sum of all odd numbers from %d to %d is %d\n", lower, upper, sum);
+   return 0;
+}
+output 
+userinput : lower bound 1
+            upper bound 10
+output the sum of all odd numbers from 1 to 10 is 25
+            
