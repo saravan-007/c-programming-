@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z') ? printf("The character is an alphabet") : printf("The character is not an alphabet");
+    
+    return 0;
+}
+output 
+user input 1.a
+output: the character is an alphabet
+2. %
+output: the character is not an alphabet 
