@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+struct Address {
+    char street[50];
+    char city[50];
+    char state[50];
+};
+
+struct Person {
+    char name[50];
+    int age;
+    struct Address address;
+};
+
+int main() {
+    struct Person person1 = {"John Doe", 30, {"123 Main St", "Anytown", "CA"}};
+    printf("Name: %s\n", person1.name);
+    printf("Age: %d\n", person1.age);
+    printf("Address: %s, %s, %s\n", person1.address.street, person1.address.city, person1.address.state);
+    return 0;
+}
+OUTPUT: Name: John Doe
+Age: 30
+Address: 123 Main St, Anytown, CA
