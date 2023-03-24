@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+   const int num = 10;   
+   int *ptr = (int *)&num;   
+
+   printf("Value of num before modification: %d\n", num);
+
+   *ptr = 20;   
+
+   printf("Value of num after modification: %d\n", num);
+
+   return 0;
+}
+
+OUTPUT:
+Value of num before modification: 10
+Value of num after modification: 20
