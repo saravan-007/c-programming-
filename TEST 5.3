@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <ctype.h>
+
+void count_vowels_consonants(char *str, int *vowels, int *consonants);
+
+int main() {
+    char str[100];
+    int vowels = 0, consonants = 0;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    count_vowels_consonants(str, &vowels, &consonants);
+
+    printf("Number of vowels: %d\n", vowels);
+    printf("Number of consonants: %d\n", consonants);
+
+    return 0;
+}
+
+void count_vowels_consonants(char *str, int *vowels, int *consonants) {
+    while (*str != '\0') {
+        if (isalpha(*str)) {
+            switch (tolower(*str)) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    (*vowels)++;
+                    break;
+                default:
+                    (*consonants)++;
+                    break;
+            }
+        }
+        str++;
+    }
+}
+OUTPUT
+test cases
+1.Enter a string: HYPOTHECATION
+Number of vowels: 5
+Number of consonants: 8
+2.Enter a string: MATRICULATION
+Number of vowels: 6
+Number of consonants: 7
+3.Enter a string: MANIPULATION
+Number of vowels: 6
+Number of consonants: 6
+4.Enter a string: SEDIMENTATION
+Number of vowels: 6
+Number of consonants: 7
+5.Enter a string: EXPERIMENTATION
+Number of vowels: 7
+Number of consonants: 8
